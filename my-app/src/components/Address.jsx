@@ -37,7 +37,7 @@ const Address = () => {
     };
 
     try {
-      await axios.post('http://localhost:5000/api/address', fullPayload);
+      await axios.post('https://shop-easy-backend-b3fb.onrender.com/api/address', fullPayload);
       alert('✅ Address saved successfully!');
       navigate('/delivery');
     } catch (error) {
