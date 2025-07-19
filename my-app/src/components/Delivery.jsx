@@ -12,7 +12,7 @@ const Delivery = () => {
   useEffect(() => {
     const fetchAddress = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/address/latest');
+        const response = await axios.get('https://shop-easy-backend-b3fb.onrender.com/api/address/latest');
         setDeliveryInfo(response.data);
       } catch (error) {
         console.error('Error fetching delivery info:', error);
