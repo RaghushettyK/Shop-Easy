@@ -23,7 +23,7 @@ const UpiPayment = () => {
     }
 
     try {
-      const orderRes = await fetch('http://localhost:5000/api/orders/create', {
+      const orderRes = await fetch('https://shop-easy-backend-b3fb.onrender.com/api/orders/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -47,7 +47,7 @@ const UpiPayment = () => {
         description: 'Order Payment',
         order_id: orderData.orderId,
         handler: async (response) => {
-          const verifyRes = await fetch('http://localhost:5000/api/orders/verify', {
+          const verifyRes = await fetch('https://shop-easy-backend-b3fb.onrender.com/api/orders/verify', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
