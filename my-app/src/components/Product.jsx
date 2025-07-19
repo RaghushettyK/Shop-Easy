@@ -9,7 +9,7 @@ const Product = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products/?category=${encodeURIComponent(category)}`)
+    fetch(`https://shop-easy-backend-b3fb.onrender.com/api/products/?category=${encodeURIComponent(category)}`)
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error('Error fetching products:', err));
