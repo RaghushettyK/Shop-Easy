@@ -12,12 +12,12 @@ const ProductCategory = () => {
   const itemsPerPage = 4;
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/products/categories')
+    fetch('https://shop-easy-backend-b3fb.onrender.com/api/products/categories')
       .then(res => res.json())
       .then(data => setCategories(data))
       .catch(err => console.error('Error fetching categories:', err));
 
-    fetch('http://localhost:5000/api/products')
+    fetch('https://shop-easy-backend-b3fb.onrender.com/api/products')
       .then(res => res.json())
       .then(data => setProducts(data))
       .catch(err => console.error('Error fetching products:', err));
