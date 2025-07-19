@@ -12,7 +12,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const res = await axios.post('https://shop-easy-backend-b3fb.onrender.com/api/auth/login', { email, password });
       alert(res.data.message);
       login(res.data.token); // ✅ Set token using context (updates navbar too)
       navigate('/');
